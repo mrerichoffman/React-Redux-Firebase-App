@@ -2,16 +2,16 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
-// Replace this with your own config details
+// Initialize Firebase
 var config = {
-  apiKey: "AIzaSyDo2HauU6PtL3PY6KthXdpIUzbDV908avo",
-  authDomain: "marioplan-files.firebaseapp.com",
-  databaseURL: "https://marioplan-files.firebaseio.com",
-  projectId: "marioplan-files",
-  storageBucket: "marioplan-files.appspot.com",
-  messagingSenderId: "1011174152626"
+  apiKey: "AIzaSyCuXNOJu4FWTaXe8wQUgI6osDcIFTGDNLY",
+  authDomain: "eric-project-test.firebaseapp.com",
+  databaseURL: "https://eric-project-test.firebaseio.com",
+  projectId: "eric-project-test",
+  storageBucket: "eric-project-test.appspot.com",
+  messagingSenderId: "895714659341"
 };
 firebase.initializeApp(config);
-firebase.firestore().settings({ timestampsInSnapshots: true });
+firebase.firestore().enablePersistence({ experimentalTabSynchronization: true });
 
-export default firebase 
+export default firebase;
